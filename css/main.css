@@ -1,0 +1,327 @@
+/* Basic styling: change this stuff */
+
+:root {
+    /* Original
+    --ajw-banner:#3EA49E;
+    --ajw-banner-element:#FFFFFF;
+    --ajw-heading:#875179;
+    --ajw-heading-element:#9C6886;
+    */
+    /* Simple
+    --ajw-banner:#373737;
+    --ajw-banner-element:#F4F4F4;
+    --ajw-heading-element:#C0B283;
+    */
+
+    /* Subtle
+    --ajw-banner:#6D7993;
+    --ajw-banner-element:#FFFFFF;
+    --ajw-heading-element:#96858F;
+    --ajw-heading:#6D7993;
+    */
+
+    /* Warm
+    --ajw-banner:#565656;
+    --ajw-banner-element:#FFFFFF;
+    --ajw-heading-element:#76323F;
+    --ajw-heading:#76323F;
+    /*--ajw-background:#D7CEC7;*/
+
+    --ajw-banner:#1D2731;
+    --ajw-banner-element:white;
+    --ajw-heading:#328CC1;
+    --ajw-heading-element:#328CC1;
+
+    --ajw-yellow:#FCB619;
+    --ajw-green:#27B351;
+    --ajw-blue:#1D86D0;
+    --ajw-red:#C80055;
+    --ajw-orange:#F27937;
+    --ajw-purple:#6962AB;
+    --ajw-grey:#888;
+
+    --ajw-base-size: 10pt;
+    --ajw-line-height: 1.2;
+    --ajw-content-pad:1rem;
+
+    --ajw-skills-height:10rem; /* for tweaking */
+}
+
+@page {
+   size: letter;
+   padding: 0;
+   margin:1mm;
+   border: none;
+   border-collapse: collapse;
+}
+
+@font-face {
+    font-family: ajwName;
+    src: url(../asset/font/archistico.ttf);
+}
+
+@font-face {
+    font-family: ajwHeading;
+    src: url(../asset/font/roboto.ttf);
+}
+
+@font-face {
+    font-family: ajwHeading;
+    src: url(../asset/font/roboto-r.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: ajwNormal;
+    src: url(../asset/font/linlibertine.ttf);
+}
+
+@font-face {
+    font-family: ajwNormal;
+    src: url(../asset/font/linlibertineB.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: ajwNormal;
+    src: url(../asset/font/linlibertineI.ttf);
+    font-style: italic;
+}
+
+/* Automatic styling */
+html {
+    font-size: var(--ajw-base-size);
+}
+
+@media screen {
+    body {
+        width: 1000px;
+    }
+}
+
+@media print {
+    body {
+        width: 8.5in;
+        height: 11in;
+    }
+}
+
+body {
+    -webkit-print-color-adjust: exact !important;
+    background-color: var(--ajw-background);
+    font-family: ajwNormal;
+    line-height: var(--ajw-line-height);
+}
+
+#banner {
+    font-family: ajwHeading;
+    font-weight:bold;
+    position: relative;
+    background-color: var(--ajw-banner);
+    color: var(--ajw-banner-element);
+    width: 100%;
+    height: 7.5rem;
+    /*background-image: url('../asset/img/andy_think.svg');
+    background-position: bottom right 2pt;
+    background-size: contain;
+    background-repeat: no-repeat;
+    */
+    text-align:center;
+}
+
+#andy {
+    position: absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    z-index:10;
+}
+
+#andy object {
+    position: absolute;
+    bottom: 0;
+    right:0;
+}
+
+#name {
+    margin-bottom:-1rem;
+    font-family: ajwName;
+    font-size: 4rem;
+}
+
+#contact {
+    margin-top: .5rem;
+    height: 2rem;
+    font-size: 1.2rem;
+}
+
+#contact img, #contact object{
+    float: none;
+    position: relative;
+    bottom: -.2rem;
+    margin-right: .2rem;
+}
+
+#content {
+    padding: 0 var(--ajw-content-pad);
+}
+
+.section2 {
+    table-layout: fixed;
+    width: 100%;
+}
+
+.section2:after {
+    margin-top:1rem;
+    display:block;
+    content:"";
+    position: relative;
+    bottom:0;
+    left:12.5%;
+    width:175%; /*dirty hack to fix layout bug. Width inherited from one column only */
+    border-bottom:2pt solid var(--ajw-grey);
+}
+
+.section2:last-child:after {
+    display:none;
+}
+
+.section2 td{
+    border-left: 1.5rem solid transparent;
+}
+
+.section2 td:first-child {
+    border-left: none;
+}
+
+.section {
+    margin-top:1rem;
+    width:100%;
+}
+
+.section:after {
+    margin-top:1rem;
+    display:block;
+    content:"";
+    position: relative;
+    bottom:0;
+    left:12.5%;
+    width:75%;
+    border-bottom:2pt solid var(--ajw-grey);
+}
+
+.section:last-child:after {
+    display:none;
+}
+
+.section2 p, .job {
+    margin-top: .4rem;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.column {
+    width: 45%;
+}
+
+.colum:first-child {
+    margin-right: 10%;
+}
+
+.heading {
+    margin-top: 1rem;
+    font-family: ajwHeading;
+    font-size: 2rem;
+    background-position: bottom left;
+    background-size: 2.5rem;
+    background-repeat: no-repeat;
+}
+
+span.company {
+    color: var(--ajw-heading);
+    font-weight: bold;
+}
+
+span.date {
+    float: right;
+}
+
+span.title {
+    display: block;
+    font-style: italic;
+}
+
+span.keyword {
+    border-bottom: 1px dashed #000;
+}
+
+ul {
+    list-style: disc outside;
+    padding-left: calc(var(--ajw-content-pad) + 1rem);
+    text-align: justify;
+    test-justify: inter-word;
+}
+
+li {
+    margin-top: .5rem;
+}
+
+#skills {
+    position: relative;
+    width: 100%;
+    text-align:center;
+}
+
+.widget {
+    position:relative;
+    text-align:center;
+    float:left;
+    width: 33%;
+}
+
+.widgetlabel {
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    z-index: 10;
+    top: 34%;
+}
+
+.widgetlabel object {
+    height: 100%;
+}
+
+#gutter {
+    width: 100%;
+    text-align: center;
+    font-style:italic;
+    clear:left;
+}
+
+.ct-label {
+    fill: black;
+    font-family: ajwHeading;
+    font-weight: bold;
+    font-size: 1rem;
+    color: black;
+}
+
+.ct-series-a .ct-slice-donut{
+    stroke: var(--ajw-green);
+}
+.ct-series-b .ct-slice-donut{
+    stroke: var(--ajw-blue);
+}
+.ct-series-c .ct-slice-donut{
+    stroke: var(--ajw-orange);
+}
+.ct-series-d .ct-slice-donut{
+    stroke: var(--ajw-red);
+}
+.ct-series-e .ct-slice-donut{
+    stroke: var(--ajw-purple);
+}
+.ct-series-f .ct-slice-donut{
+    stroke: var(--ajw-yellow);
+}

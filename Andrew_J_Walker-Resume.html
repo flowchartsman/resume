@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    <head>
+        <title>The Resume of Andrew J. Walker</title>
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="chartist/chartist.min.css" />
+        <script type="text/javascript" src="chartist/chartist.min.js"></script>
+        <link rel="stylesheet" href="css/main.css" />
+        <script type="text/javascript">
+            window.onload = function() {
+                new Chartist.Pie('#languages', {
+                    labels: ['Perl', 'Python', 'HTML/CSS/JS', 'Go', 'C/C++', 'Ruby'],
+                    series: [7, 4, 8, 10, 2, 3]
+                    }, {
+                    donut: true,
+                    donutWidth: 30,
+                    showLabel: true
+                });
+                new Chartist.Pie('#datastores', {
+                    labels: ['PostgreSQL', 'MySQL', 'Elasticsearch', 'Kafka', 'MongoDB'],
+                    series: [10, 8, 6, 5, 7]
+                    }, {
+                    donut: true,
+                    donutWidth: 30,
+                    showLabel: true
+                });
+                new Chartist.Pie('#oses', {
+                    labels: ['Linux', 'Windows', 'FreeBSD', 'OSX'],
+                    series: [10, 3, 6, 8]
+                    }, {
+                    donut: true,
+                    donutWidth: 30,
+                    showLabel: true
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <div id="banner">
+            <div id="andy">
+                <object data="asset/img/andy_think.svg" type="image/svg+xml"></object>
+            </div>
+            <div id="name">Andrew J. Walker</div>
+            Software Engineer
+            <div id="contact">
+                <object data="asset/img/where.svg" type="image/svg+xml"></object>Columbia, MD
+                <object data="asset/img/mail.svg" type="image/svg+xml"></object>walkeraj@gmail.com
+                <object data="asset/img/phone.svg" type="image/svg+xml"></object>443.844.9145
+                <object data="asset/img/github_logo.svg" type="image/svg+xml"></object>github.com/alaska
+            </div>
+        </div>
+        <div id="content">
+            <table class="section2">
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="heading"><object data="asset/img/about.svg" type="image/svg+xml"></object>About</div>
+                        <p>I am a professional <span class="keyword">Go</span> ("Golang") developer and full-stack software engineer with over ten years of experience, most of it in the security industry. I believe in the aesthetics of software design, and that better security is a proxy to better quality of software overall. I am interested in the future of programming languages as the industry embraces security, concurrency and machine learning as more prominent paradigms.
+                        </p>
+                        <p>Other areas of professional interest: <span class="keyword">Julia</span>, <span class="keyword">Rust</span>, human/computer interaction, parallel computing, big data, and the structured visual representation of data.</p>
+                    </td>
+                    <td>
+                        <div class="heading"><object data="asset/img/education.svg" type="image/svg+xml"></object>Education</div>
+                        <p>Hiram College, class of 2002<br/>
+                        Double Bachelors: Computer Science / Philosophy</p>
+                        <div class="heading"><object data="asset/img/interests2.svg" type="image/svg+xml"></object>Interests</div>
+                        <p>In no particular order: martial arts, zymurgy, metalwork, 3D-printing, electrical engineering, physical security, cat psychology, and the search for the perfect pizza</p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <table class="section2">
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="heading"><object data="asset/img/experience.svg" type="image/svg+xml"></object>Experience</div>
+                        <div class="job">
+                            <span class="company">CrowdStrike Inc.</span> (Cloud Team)<span class="date">November 2015 - Current</span>
+                            <span class="title">Senior Software Engineer</span>
+                            <ul>
+                                <li>Helped develop the Role-Based Access Control (<span class="keyword">RBAC</span>) Authorization system to allow for fined-grained control over what actions and data a customer is given access to, while allowing them greater control over their own data.</li>
+                                <li>Designed and implemented the Mailstrike service, which acts as a central broker for intelligence and detection-related email notifications. This project touched on a lot of the technologies we use in the cloud, including <span class="keyword">Kafka</span>, <span class="keyword">Protobuf</span> and AWS <span class="keyword">SES</span>.</li>
+                                <li>Completely redesigned and re-implemented our <span class="keyword">Elasticsearch</span>-backend intelligence APIs to allow flexible searching with <span class="keyword">entitlement</span>-based authorization (later replaced with RBAC).</li>
+                                <li>Numerous small helpers and routines to improve developer experience in testing and usage of our internal <span class="keyword">microservices</span> standard (MSA).</li>
+                            </ul>
+                        </div>
+                        <div class="job">
+                            <!-- <span class="company">Cisco Systems</span> (TALOS Group)<span class="date">October 2013 - October 2015</span>
+                            <span class="title">Research Engineer III (title/group name change post-acquisition)</span> -->
+                            <span class="company">Sourcefire</span> (Vulnerability Research Team)<span class="date">August 2011 - October 2013</span>
+                            <span class="title">Senior Research Systems Engineer</span>
+                            <ul>
+                                <li>Designed the initial concept of what eventually became our product-level automated <span class="keyword">malware analysis</span> system and related services. System is now in production and handles hundreds of thousands of samples per day. This project involved several technologies, including <span class="keyword">Joe Sandbox</span>, and <span class="keyword">ActiveMQ</span> with <span class="keyword">MySQL</span> as a datastore.</li>
+                            </ul>
+                        </div>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Designed and implemented the IP/URL reputation services from end to end, including data collection, storage and deployment. This data is used throughout the company and is deployed into the field to thousands of devices. This project was originally written in <span class="keyword">Perl</span> (later Go), with a <span class="keyword">MongoDB</span> backend which was later replaced by <span class="keyword">Postgres</span>.</li>
+                        </ul>
+                        <div class="job">
+                            <span class="company">Sourcefire</span> (Engineering)<span class="date">February 2008 - August 2011</span>
+                            <span class="title">Senior Research Systems Engineer</span>
+                            <ul>
+                                <li>Full-stack UI and backend developer for Sourcefire 3D system of sensors and defense centers.</li>
+                                <li>Developed the granular RBAC system for the entire product line.</li>
+                                <li>Made major improvements to backend code and build system, including <span class="keyword">parallelizing</span> the firsboot process for a 1000% speed increase.</li>
+                                <li>Responsible for bringing the SFLinuxOS up to <span class="keyword">IPV6</span> compliance.</li>
+                            </ul>
+                        </div>
+                        <div class="job">
+                            <span class="company">State of Alaska</span> (Dept. of Revenue)<span class="date">February 2008 - August 2011</span>
+                            <span class="title">Analyst Programmer II</span>
+                            <ul>
+                                <li>One of two primary developers of the online Permanent Fund Dividend application system in <span class="keyword">.NET</span> and <span class="keyword">powerbuilder</span>. At the time of departure, 70-80% of the state were users.</li>
+                                <li>Developed online garnishment system for state and official use.</li>
+                                <li>Implemented section 508 standards for usability, with additional focus on colorblindness and the visually impaired.</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="heading"><object data="asset/img/skills.svg" type="image/svg+xml"></object>Skills</div>
+            <div id="skills">
+                <div id="languages" class="widget">
+                    <div class="widgetlabel">
+                        <object data="asset/img/programming.svg" type="image/svg+xml"></object>
+                    </div>
+                </div>
+                <div id="datastores" class="widget">
+                    <div class="widgetlabel">
+                        <object data="asset/img/data_store.svg" type="image/svg+xml"></object>
+                    </div>
+                </div>
+                <div id="oses" class="widget">
+                    <div class="widgetlabel">
+                        <object data="asset/img/os.svg" type="image/svg+xml"></object>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="gutter">(references available upon request)</div>
+    </body>
+</html>
