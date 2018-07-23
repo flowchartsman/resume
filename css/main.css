@@ -44,7 +44,7 @@
     --ajw-line-height: 1.2;
     --ajw-content-pad:1rem;
 
-    --ajw-skills-height:10rem; /* for tweaking */
+    --ajw-skills-height:9.5rem; /* for tweaking */
 }
 
 @page {
@@ -120,7 +120,7 @@ body {
     background-color: var(--ajw-banner);
     color: var(--ajw-banner-element);
     width: 100%;
-    height: 7.5rem;
+    height: 5.5rem;
     /*background-image: url('../asset/img/andy_think.svg');
     background-position: bottom right 2pt;
     background-size: contain;
@@ -145,13 +145,12 @@ body {
 }
 
 #name {
-    margin-bottom:-1rem;
+    margin-bottom:-.5rem;
     font-family: ajwName;
-    font-size: 4rem;
+    font-size: 2.5rem;
 }
 
 #contact {
-    margin-top: .5rem;
     height: 2rem;
     font-size: 1.2rem;
 }
@@ -263,7 +262,7 @@ li {
     position:relative;
     text-align:center;
     float:left;
-    width: 33%;
+    width: 28%;
     height:100%;
 }
 

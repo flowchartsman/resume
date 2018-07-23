@@ -18,8 +18,8 @@
                     showLabel: true
                 });
                 new Chartist.Pie('#datastores', {
-                    labels: ['PostgreSQL', 'MySQL', 'Elasticsearch', 'Kafka', 'MongoDB'],
-                    series: [10, 8, 6, 5, 7]
+                    labels: ['PostgreSQL', 'MySQL', 'Elastic', 'Kafka', 'NSQ', 'MongoDB'],
+                    series: [7, 8, 6, 4, 5, 10]
                     }, {
                     donut: true,
                     donutWidth: 30,
@@ -39,7 +39,7 @@
     <body>
         <div id="banner">
             <div id="andy">
-                <object data="asset/img/andy_think.svg" type="image/svg+xml"></object>
+                <object data="asset/img/andy_think.svg" type="image/svg+xml" style="height:100%"></object>
             </div>
             <div id="name">Andrew J. Walker</div>
             Software Engineer
@@ -76,8 +76,14 @@
                     <td>
                         <div class="heading"><object data="asset/img/experience.svg" type="image/svg+xml"></object>Experience</div>
                         <div class="job">
-                            <span class="company">CrowdStrike Inc.</span> (Cloud Team)<span class="date">November 2015 - Current</span>
-                            <span class="title">Senior Software Engineer</span>
+                            <span class="company">CrowdStrike Inc.</span><span class="date">November 2015 - Current</span>
+                            <span class="title">Senior Research Engineer (Intelligence Team) Aug 2017 - Current</span>
+                            <ul>
+                                <li>Design and maintain custom systems and software for an industry-leading research and intelligence team</li>
+                                <li>Primary author of a team-wide Golang repo, as part of the effort in migrating an <span class="keyword">NSQ</span>-backed data plane from Python.</li>
+                                <li>Part of a small, expert team designing a customized malware analysis system, supporting pluggable backends and flexible user code.</li>
+                            </ul>
+                            <span class="title">Senior Software Engineer (Cloud Team) Nov 2015 - Aug 2017</span>
                             <ul>
                                 <li>Backend developer for the Role-Based Access Control (<span class="keyword">RBAC</span>) Authorization system, allowing for fined-grained control over what actions and data a customer is given access to, while allowing them greater control over their own data.</li>
                                 <li>Designed and implemented the Mailstrike service, which acts as a central broker for intelligence and detection-related email notifications. This project touched on a lot of the technologies we use in the cloud, including <span class="keyword">Kafka</span>, <span class="keyword">Protobuf</span> and AWS <span class="keyword">SES</span>.</li>
@@ -85,23 +91,18 @@
                                 <li>Numerous small helpers and routines to improve developer experience in testing and usage of our internal <span class="keyword">microservices</span> standard (MSA).</li>
                             </ul>
                         </div>
+                    </td>
+                    <td>
                         <div class="job">
                             <!-- <span class="company">Cisco Systems</span> (TALOS Group)<span class="date">October 2013 - October 2015</span>
                             <span class="title">Research Engineer III (title/group name change post-acquisition)</span> -->
-                            <span class="company">Sourcefire</span> (Vulnerability Research Team)<span class="date">August 2011 - October 2015</span>
-                            <span class="title">Senior Research Systems Engineer</span>
+                            <span class="company">Sourcefire Inc. &rArr; Cisco Systems</span><span class="date">February 2008 - October 2015</span>
+                            <span class="title">Senior Research Systems Engineer (TALOS Group) Aug 2011 - Oct 2015</span>
                             <ul>
                                 <li>Designed the initial concept of what eventually became our product-level automated <span class="keyword">malware analysis</span> system and related services. System is now in production and handles hundreds of thousands of samples per day. This project involved several technologies, including <span class="keyword">Joe Sandbox</span>, and <span class="keyword">ActiveMQ</span> with <span class="keyword">MySQL</span> as a datastore.</li>
+                                <li>Designed and implemented the IP/URL reputation services from end to end, including data collection, storage and deployment. This data is used throughout the company and is deployed into the field to thousands of devices. This project was originally written in <span class="keyword">Perl</span> (later Go), with a <span class="keyword">MongoDB</span> backend which was later replaced by <span class="keyword">Postgres</span>.</li>
                             </ul>
-                        </div>
-                    </td>
-                    <td>
-                        <ul>
-                            <li>Designed and implemented the IP/URL reputation services from end to end, including data collection, storage and deployment. This data is used throughout the company and is deployed into the field to thousands of devices. This project was originally written in <span class="keyword">Perl</span> (later Go), with a <span class="keyword">MongoDB</span> backend which was later replaced by <span class="keyword">Postgres</span>.</li>
-                        </ul>
-                        <div class="job">
-                            <span class="company">Sourcefire</span> (Engineering)<span class="date">February 2008 - August 2011</span>
-                            <span class="title">Software Engineer III</span>
+                            <span class="title">Software Engineer III (Engineering Team) Feb 2008 - Aug 2011</span>
                             <ul>
                                 <li>Full-stack UI and backend developer for Sourcefire 3D system of sensors and defense centers.</li>
                                 <li>Developed the granular RBAC system for the entire product line.</li>
@@ -114,7 +115,6 @@
                             <span class="title">Analyst Programmer II</span>
                             <ul>
                                 <li>One of two primary developers of the online Permanent Fund Dividend application system in <span class="keyword">.NET</span> and <span class="keyword">powerbuilder</span>. At the time of departure, 70-80% of the state were users.</li>
-                                <li>Developed online garnishment system for state and official use.</li>
                                 <li>Implemented section 508 standards for usability, with additional focus on colorblindness and the visually impaired.</li>
                             </ul>
                         </div>
@@ -122,7 +122,7 @@
                 </tr>
                 </tbody>
             </table>
-            <div class="heading"><object data="asset/img/skills.svg" type="image/svg+xml"></object>Skills</div>
+            <div class="heading" style="float:left"><object data="asset/img/skills.svg" type="image/svg+xml"></object>Skills</div>
             <div id="skills">
                 <div id="languages" class="widget">
                     <div class="widgetlabel">
