@@ -209,12 +209,13 @@ body {
 }
 
 .heading {
-    margin-top: 1rem;
+    margin-top: .5rem;
     font-family: ajwHeading;
-    font-size: 2rem;
+    font-size:1.5rem;
     background-position: bottom left;
     background-size: 2.5rem;
     background-repeat: no-repeat;
+    font-weight:bold;
 }
 
 .heading object {
@@ -263,15 +264,15 @@ li {
     text-align:center;
     float:left;
     width: 28%;
-    height:100%;
+    height:80%;
 }
 
 .widgetlabel {
     position: absolute;
     width: 100%;
-    height: 30%;
+    height: 25%;
     z-index: 10;
-    top: 34%;
+    top: 37%;
 }
 
 .widgetlabel object {
@@ -279,6 +280,7 @@ li {
 }
 
 #gutter {
+    margin-top:-2rem;
     width: 100%;
     text-align: center;
     font-style:italic;
