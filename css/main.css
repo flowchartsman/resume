@@ -234,6 +234,7 @@ span.date {
 span.title {
     display: block;
     font-style: italic;
+    font-weight: bold;
 }
 
 span.keyword {
